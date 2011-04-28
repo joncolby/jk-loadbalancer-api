@@ -1,0 +1,87 @@
+import org.apache.jk.status.*
+
+class CheckActivationQueueJob {
+    // def timeout = 5000l // execute job once in 5 seconds
+
+    static triggers = {
+//    	cron name:'runCheckActivationQueueJob',  cronExpression: '0 0/1 * * * ?'
+//		cron name:'runCheckActivationQueueJob',  cronExpression: '* * * * * ?'
+
+     }
+    
+    def JkService jkService
+    def concurrent = false
+    
+    def execute() {
+        // execute task
+        
+        def queue = ActivationQueue.findAllByNewActivationTimeLessThanEqualsAndNewActivationIsNotNull(new Date(),[order:"asc", sort:"dateCreated"])
+        
+        queue.each { ActivationQueue q ->
+        
+			def worker = ModJkWorker.get(q.workerId)
+
+			//log.info "queue item is: " + q
+			log.debug "worker found :  " + worker
+
+        if (worker) {
+
+
+    	   if ( jkService.updateActivation(worker,  q.newActivation) ) {
+        						worker.activation = q.newActivation
+        						worker.save(flush:true)
+        						q.delete(flush:true)
+        			} else {
+        			 	log.error "second attempt to change activation for " + worker + " to " + q.newActivation + "failed"
+        			}
+      				
+        			
+        } else {
+        	q.delete(flush:true)
+        }
+       	
+    }
+        
+        
+    }
+    
+
+  /*
+    def getStatus(ModJkWorker jkWorker) {
+
+        def worker = jkWorker.name
+        def url = jkWorker.loadbalancer.frontend.jkstatusURL
+        def user = jkWorker.loadbalancer.frontend.user
+        def passwd = jkWorker.loadbalancer.frontend.password
+        
+        def jkstatus = jkService.jkStatus(url,user,passwd)
+        def activation
+ 		
+        def frontend = ApacheFrontend.findByName(jkWorker.loadbalancer.frontend.name)
+        
+ 		jkstatus.balancers.each{ balancer ->
+ 				
+ 				def lb = ModJkLoadbalancer.findByFrontendAndName(frontend,balancer.name)
+ 				
+ 				def  members = balancer.members
+ 					
+ 				members.each { JkBalancerMember member -> 
+ 									if ( worker == member.name ) {
+ 												activation = member.activation
+ 									}
+ 				}
+ 				
+ 		}
+   	
+        return activation
+   }
+  */
+    
+    
+    
+    
+    
+    
+    
+    
+}

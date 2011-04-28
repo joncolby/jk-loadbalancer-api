@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz
+END
+DefaultGrailsTaskClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/DefaultGrailsTaskClass.java
+END
+GrailsTaskClassProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/GrailsTaskClassProperty.java
+END
+CronTriggerFactoryBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/CronTriggerFactoryBean.java
+END
+GrailsJobFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/GrailsJobFactory.java
+END
+GrailsTaskClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/GrailsTaskClass.java
+END
+TaskArtefactHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/TaskArtefactHandler.java
+END
+JobDetailFactoryBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/JobDetailFactoryBean.java
+END
+SimpleTriggerFactoryBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/java/org/codehaus/groovy/grails/plugins/quartz/SimpleTriggerFactoryBean.java
+END

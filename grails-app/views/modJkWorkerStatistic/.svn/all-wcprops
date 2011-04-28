@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/views/modJkWorkerStatistic
+END
+list.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/views/modJkWorkerStatistic/list.gsp
+END
+show.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/views/modJkWorkerStatistic/show.gsp
+END
+create.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/views/modJkWorkerStatistic/create.gsp
+END
+edit.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/views/modJkWorkerStatistic/edit.gsp
+END

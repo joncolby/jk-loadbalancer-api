@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/operations/!svn/ver/626/tomcatmaster/grails-app/conf
+END
+BootStrap.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/operations/!svn/ver/626/tomcatmaster/grails-app/conf/BootStrap.groovy
+END
+UrlMappings.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/conf/UrlMappings.groovy
+END
+Config.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/conf/Config.groovy
+END
+DataSource.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/conf/DataSource.groovy
+END

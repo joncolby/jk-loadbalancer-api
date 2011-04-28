@@ -1,0 +1,2 @@
+<g:each in="${loadbalancers}" status="i" var="lb">${lb}|Total:<jklb:getCount name="${lb}" />|OK:<jklb:getStateCount name="${lb}" state="OK" />|Error:<jklb:getStateCount name="${lb}" state="ERR" />|ACT:<jklb:getActivationCount name="${lb}" activation="ACT"/>|DIS:<jklb:getActivationCount name="${lb}" activation="DIS"/>|STP:<jklb:getActivationCount name="${lb}" activation="STP"/>
+</g:each>

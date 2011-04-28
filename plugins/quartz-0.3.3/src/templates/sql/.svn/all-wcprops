@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql
+END
+tables_sapdb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_sapdb.sql
+END
+tables_informix.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_informix.sql
+END
+tables_postgres7.sql
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_postgres7.sql
+END
+tables_mysql_innodb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_mysql_innodb.sql
+END
+tables_oracle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_oracle.sql
+END
+tables_mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_mysql.sql
+END
+tables_derby.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_derby.sql
+END
+tables_db2_v72.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_db2_v72.sql
+END
+tables_postgres.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_postgres.sql
+END
+tables_db2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_db2.sql
+END
+tables_solid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_solid.sql
+END
+tables_hsqldb_old.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_hsqldb_old.sql
+END
+tables_hsqldb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_hsqldb.sql
+END
+tables_cloudscape.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_cloudscape.sql
+END
+tables_pointbase.sql
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_pointbase.sql
+END
+tables_db2_v8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_db2_v8.sql
+END
+tables_firebird.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_firebird.sql
+END
+tables_sqlServer.sql
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_sqlServer.sql
+END
+tables_sybase.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/src/templates/sql/tables_sybase.sql
+END

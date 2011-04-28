@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/operations/!svn/ver/627/tomcatmaster
+END
+tomcatmaster.iml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/operations/!svn/ver/667/tomcatmaster/tomcatmaster.iml
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/operations/!svn/ver/419/tomcatmaster/.project
+END
+ivysettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/operations/!svn/ver/419/tomcatmaster/ivysettings.xml
+END
+tomcatmaster-test.launch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/operations/!svn/ver/419/tomcatmaster/tomcatmaster-test.launch
+END
+orig_ApacheFrontendScannerJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/operations/!svn/ver/419/tomcatmaster/orig_ApacheFrontendScannerJob.groovy
+END
+tomcatmaster.ipr
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/operations/!svn/ver/667/tomcatmaster/tomcatmaster.ipr
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/operations/!svn/ver/787/tomcatmaster/application.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/operations/!svn/ver/419/tomcatmaster/build.xml
+END
+output.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/operations/!svn/ver/419/tomcatmaster/output.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/operations/!svn/ver/431/tomcatmaster/.classpath
+END
+build-deploy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/operations/!svn/ver/786/tomcatmaster/build-deploy.sh
+END
+tomcatmaster.iws
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/operations/!svn/ver/787/tomcatmaster/tomcatmaster.iws
+END
+ivy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/operations/!svn/ver/419/tomcatmaster/ivy.xml
+END
+tomcatmaster.launch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/operations/!svn/ver/419/tomcatmaster/tomcatmaster.launch
+END
+tomcatmaster.tmproj
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/operations/!svn/ver/419/tomcatmaster/tomcatmaster.tmproj
+END

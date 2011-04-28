@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/scripts
+END
+CreateJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/scripts/CreateJob.groovy
+END
+InstallQuartzConfig.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/scripts/InstallQuartzConfig.groovy
+END
+_Install.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/scripts/_Install.groovy
+END
+_Upgrade.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/scripts/_Upgrade.groovy
+END

@@ -1,0 +1,4 @@
+#Do not edit app.grails.* properties, they may change automatically. DO NOT put application configuration in here, it is not the right place!
+#Fri Apr 11 09:36:55 SGT 2008
+app.grails.version=1.0.2
+app.name=eastwood-chart

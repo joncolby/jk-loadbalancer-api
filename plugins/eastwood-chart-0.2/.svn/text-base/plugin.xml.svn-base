@@ -1,0 +1,9 @@
+<plugin name='eastwood-chart' version='0.2'>
+  <author>Seymour Cakes</author>
+  <authorEmail>seymores @ gmail</authorEmail>
+  <title>This plugin wraps JFreeChart's Eastwood servlet for Grails app</title>
+  <resources>
+    <resource>UrlMappings</resource>
+    <resource>EastwoodChartTagLib</resource>
+  </resources>
+</plugin>

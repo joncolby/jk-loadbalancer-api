@@ -1,0 +1,84 @@
+10
+
+dir
+665
+https://localhost:81/svn/operations/tomcatmaster/web-app
+https://localhost:81/svn/operations
+
+
+
+2010-06-11T15:03:32.268360Z
+436
+jcolby
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5d19adf9-cc9f-4dcc-8cd1-d4ae48948a67
+
+index.gsp
+file
+
+
+
+
+2010-08-15T14:46:30.000000Z
+e9f4d3450ba02fe92d55f4ae4b53dee8
+2010-06-07T08:47:08.290251Z
+419
+jcolby
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+971
+
+META-INF
+dir
+
+
+
+add
+
+images
+dir
+
+WEB-INF
+dir
+
+css
+dir
+
+docs
+dir
+
+js
+dir
+

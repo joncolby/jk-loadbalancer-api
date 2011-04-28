@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/operations/!svn/ver/530/tomcatmaster/grails-app/jobs
+END
+CheckActivationQueueJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/jobs/CheckActivationQueueJob.groovy
+END
+RotateAuditJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/operations/!svn/ver/419/tomcatmaster/grails-app/jobs/RotateAuditJob.groovy
+END
+FrontInventoryJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/jobs/FrontInventoryJob.groovy
+END
+CleanupJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/jobs/CleanupJob.groovy
+END
+ApacheFrontendScannerJob.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/operations/!svn/ver/785/tomcatmaster/grails-app/jobs/ApacheFrontendScannerJob.groovy
+END

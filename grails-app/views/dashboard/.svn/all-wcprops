@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/operations/!svn/ver/561/tomcatmaster/grails-app/views/dashboard
+END
+index.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/operations/!svn/ver/561/tomcatmaster/grails-app/views/dashboard/index.gsp
+END
+workerActivations.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/operations/!svn/ver/535/tomcatmaster/grails-app/views/dashboard/workerActivations.gsp
+END
+activationQueue.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/operations/!svn/ver/535/tomcatmaster/grails-app/views/dashboard/activationQueue.gsp
+END
+workerErrors.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/operations/!svn/ver/535/tomcatmaster/grails-app/views/dashboard/workerErrors.gsp
+END

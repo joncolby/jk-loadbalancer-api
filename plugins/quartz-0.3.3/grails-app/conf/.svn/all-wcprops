@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/grails-app/conf
+END
+DefaultQuartzConfig.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/grails-app/conf/DefaultQuartzConfig.groovy
+END
+QuartzBootStrap.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/operations/!svn/ver/419/tomcatmaster/plugins/quartz-0.3.3/grails-app/conf/QuartzBootStrap.groovy
+END

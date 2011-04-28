@@ -1,0 +1,55 @@
+10
+
+dir
+629
+https://localhost:81/svn/operations/tomcatmaster/grails-app
+https://localhost:81/svn/operations
+
+
+
+2010-08-18T10:18:58.109863Z
+626
+jcolby
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5d19adf9-cc9f-4dcc-8cd1-d4ae48948a67
+
+i18n
+dir
+
+utils
+dir
+
+taglib
+dir
+
+services
+dir
+
+conf
+dir
+
+controllers
+dir
+
+domain
+dir
+
+jobs
+dir
+
+views
+dir
+

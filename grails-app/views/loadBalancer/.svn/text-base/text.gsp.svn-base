@@ -1,0 +1,2 @@
+<g:each in="${modJkWorkerList}" status="i" var="modJkWorker">${modJkWorker.loadbalancer.frontend.name}|${fieldValue(bean:modJkWorker, field:'loadbalancer')}|${fieldValue(bean:modJkWorker, field:'name')}|${fieldValue(bean:modJkWorker, field:'host')}|${fieldValue(bean:modJkWorker, field:'address')}|${fieldValue(bean:modJkWorker, field:'state')}|${fieldValue(bean:modJkWorker, field:'activation')}
+</g:each>
