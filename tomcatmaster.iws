@@ -126,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrontInventoryJob.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FrontInventoryJob.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/jobs/FrontInventoryJob.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="50" selection-start="229" selection-end="229" vertical-scroll-proportion="-2.7692308">
+            <state line="39" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.5595092">
               <folding />
             </state>
           </provider>
@@ -153,10 +153,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="5" selection-start="128" selection-end="128" vertical-scroll-proportion="0.12841855">
+            <state line="9" column="5" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,8 +213,8 @@
         <option value="$PROJECT_DIR$/grails-app/jobs/CheckActivationQueueJob.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/LoadBalancerController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/jobs/FrontInventoryJob.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/jobs/FrontInventoryJob.groovy" />
       </list>
     </option>
   </component>
@@ -1212,16 +1212,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/jobs/FrontInventoryJob.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="50" selection-start="229" selection-end="229" vertical-scroll-proportion="-2.7692308">
+        <state line="9" column="5" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/jobs/FrontInventoryJob.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="128" selection-end="128" vertical-scroll-proportion="0.12841855">
+        <state line="39" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.5595092">
           <folding />
         </state>
       </provider>
