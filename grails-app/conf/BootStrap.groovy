@@ -4,6 +4,10 @@ class BootStrap {
 	 def JkService jkService
 
      def init = { servletContext ->
+
+
+     // cleanout all hosts on startup
+     Host.list().each { it.delete(flush:true) }
      
    // bootstrapping front hosts should only be done when database is initialized!  
    // otherwise you get duplicate front hosts

@@ -5,8 +5,9 @@ class FrontInventoryJob {
     //def timeout = 5000l // execute job once in 5 seconds
 
       static triggers = {
+        simple name:'simpleTrigger', startDelay:10000, repeatCount: 1
     	cron name:'FrontInventoryJob',  cronExpression: '0 0/5 * * * ?'
-		// cron name:'FrontInventoryJob',  cronExpression: '* * * * * ?'
+		 //cron name:'FrontInventoryJob',  cronExpression: '* * * * * ?'
 
      }
 
@@ -23,20 +24,20 @@ class FrontInventoryJob {
     def execute() {
         // execute task
 
-
-      log.info "scanning for maximum $maxFronts new fronts"
-
-     
-      def hostprefixes = ["front", "kfront"]
-      def datacenters = [ 45, 38, 46 ]
+      log.info "Starting Mod-JK Inventory Job"
 
 
       // read fronts out of the inventory database
       def sql = Sql.newInstance(inventoryDBUrl, inventoryDBUser, inventoryDBPassword, "com.mysql.jdbc.Driver")
 
-      sql.eachRow("select sql_cache get_hostname_by_server_id(server_id) as name from assignment where serverclass_id=67", {
+      def className = sql.firstRow("select serverclass_id from serverclass where classname = 'FRONT-NS'")
+
+      def serverclass_id = className.serverclass_id
+
+      sql.eachRow("select sql_cache get_hostname_by_server_id(server_id) as name from assignment where serverclass_id=${serverclass_id}", {
           dbFronts << it.name
             })
+
 
       sql.close()
 
