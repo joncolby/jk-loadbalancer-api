@@ -8,6 +8,20 @@ class BootStrap {
 
      // cleanout all hosts on startup
      Host.list().each { it.delete(flush:true) }
+
+     // add non-autoconf servers manually
+
+    def front38_1a = new ApacheFrontend (name:"front38-1.mobile.rz", jkstatusURL:"http://front38-1.mobile.rz/jkmanager")
+    def front38_1 = new Host (name:"front38-1.mobile.rz",ipAddress:"10.38.252.41")
+    front38_1.addToFrontends(front38_1a)
+    front38_1.save(flush:true)
+
+    def front38_2a = new ApacheFrontend (name:"front38-2.mobile.rz", jkstatusURL:"http://front38-2.mobile.rz/jkmanager")
+    def front38_2 = new Host (name:"front38-2.mobile.rz",ipAddress:"10.38.252.42")
+    front38_2.addToFrontends(front38_2a)
+    front38_2.save(flush:true)
+
+
      
    // bootstrapping front hosts should only be done when database is initialized!  
    // otherwise you get duplicate front hosts
