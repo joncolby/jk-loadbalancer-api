@@ -42,6 +42,8 @@ class ApacheFrontendScannerJob{
     def dataSource
     
     def frontlist
+
+    def maxMinutes = Integer.parseInt(config.workerCleanupJob.maxValidMinutes)
     
    def execute() {
     	
@@ -223,7 +225,24 @@ class ApacheFrontendScannerJob{
         } // loop through list of frontends
 
     // sessionFactory.currentSession.clear()
-    // sessionFactory.currentSession.flush() 
+    // sessionFactory.currentSession.flush()
+
+
+     // CLEANUP MAINTENANCE TASK
+        def now = new Date()
+        log.info "running cleanup job at " + now
+
+        def c = Calendar.getInstance()
+        c.add(Calendar.MINUTE, -maxMinutes)
+        def oldAge = c.getTime()
+        log.info "looking for workers older than " + oldAge
+        def results = ModJkWorker.findAllByLastUpdatedLessThanEquals(oldAge)
+
+        results.each { worker ->
+        	log.info "deleting old entry $worker with last modified date " + worker.lastUpdated
+        	worker.delete()
+        }
+
 
     } // close execute
 } // close class

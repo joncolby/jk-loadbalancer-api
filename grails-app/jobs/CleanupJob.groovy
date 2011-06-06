@@ -1,6 +1,7 @@
-import org.codehaus.groovy.grails.commons.*
-import groovy.sql.Sql
 
+import org.codehaus.groovy.grails.commons.*
+   
+ // THIS IS NOW RUN AS PART FO THE APACHEFRONTEND SCANNER JOB SO UPDATES AND DELETES DON'T CAUSE PARALLEL ROW ACCESS
 class CleanupJob {
     //def timeout = 5000l // execute job once in 5 seconds
 
@@ -14,7 +15,7 @@ class CleanupJob {
     	
     static triggers = {
     	// run every x minutes
-       cron name: 'runCleanup', startDelay: 10000, cronExpression: "0 0/10 * * * ?"
+       //cron name: 'runCleanup', startDelay: 10000, cronExpression: "0 0/10 * * * ?"
        //  cron name: 'runCleanup', startDelay: 10000, cronExpression: "* * * * * ?"
       }
     
