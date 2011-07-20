@@ -43,7 +43,7 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$MODULE_DIR$/../../.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

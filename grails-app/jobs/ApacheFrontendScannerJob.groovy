@@ -38,14 +38,13 @@ class ApacheFrontendScannerJob{
     def concurrentScans = Integer.parseInt(config.frontscanner.parallelThreads)
     //def concurrentScans = 10
     def sessionFactory
-
     def dataSource
-    
     def frontlist
-
     def maxMinutes = Integer.parseInt(config.workerCleanupJob.maxValidMinutes)
+
+    boolean abortCleanup = false
     
-   def execute() {
+    def execute() {
     	
     	//sessionFactory.currentSession.flush()
     	
@@ -70,20 +69,24 @@ class ApacheFrontendScannerJob{
         	    log.info "finished data collection for " + frontend.name + " "  + new Date()
         		
         		} catch ( ConnectTimeoutException cex ) {
+                     abortCleanup = true
         			 log.error "Cannot connect to $frontend.name"
         			 return null
                 } catch (ConnectException ce) {
+                     abortCleanup = true
                      log.error "Connection refused to " + frontend.name + " : " + ce.toString()
                      //def bad = Host.findByName(frontend.name)
                      //bad.delete()
                      return null
                 } catch (java.net.UnknownHostException uhe) {
+                     abortCleanup = true
                      //log.error "Unknown host " + frontend.name + " (assuming host was deconfigured. deleting this host) : " + uhe.toString()
                      log.error "Unknown host " + frontend.name + " : " + uhe.toString()
                      //def bad = Host.findByName(frontend.name)
                      //bad.delete()
                      return null
         		} catch (Exception e) {
+                    abortCleanup = true
                     log.error "uncaught exception encountered: " + e.toString()
         			return null
         		} finally {
@@ -197,9 +200,6 @@ class ApacheFrontendScannerJob{
                     }
 */
 
-
-                    //worker.save(flush:true)
-                    
                             if (  ! worker.save()  ) {
                             		log.error "problem saving worker "
                             			worker.errors.allErrors.each {
@@ -229,19 +229,21 @@ class ApacheFrontendScannerJob{
 
 
      // CLEANUP MAINTENANCE TASK
-        def now = new Date()
-        log.info "running cleanup job at " + now
+      if (! abortCleanup ) {
+          def now = new Date()
+          log.info "running cleanup job at " + now
 
-        def c = Calendar.getInstance()
-        c.add(Calendar.MINUTE, -maxMinutes)
-        def oldAge = c.getTime()
-        log.info "looking for workers older than " + oldAge
-        def results = ModJkWorker.findAllByLastUpdatedLessThanEquals(oldAge)
+          def c = Calendar.getInstance()
+          c.add(Calendar.MINUTE, -maxMinutes)
+          def oldAge = c.getTime()
+          log.info "looking for workers older than " + oldAge
+          def results = ModJkWorker.findAllByLastUpdatedLessThanEquals(oldAge)
 
-        results.each { worker ->
-        	log.info "deleting old entry $worker with last modified date " + worker.lastUpdated
-        	worker.delete()
-        }
+          results.each { worker ->
+        	  log.info "deleting old entry $worker with last modified date " + worker.lastUpdated
+        	  worker.delete()
+          }
+      }
 
 
     } // close execute
