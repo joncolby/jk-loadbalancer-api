@@ -80,7 +80,7 @@ class LoadBalancerController {
             if (params.updateActivation) {
                 workers = jkService.searchWorkers(params.route, params.host, params.activation, params.state)
 
-                log.debug "WORKERS FOUND FOR ${params.host}: " + workers
+                log.debug "WORKERS FOUND FOR ${params.host}: ${workers}"
 
                 //  update workers in background thread. update status in DB
 
