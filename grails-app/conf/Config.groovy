@@ -47,12 +47,16 @@ environments {
 }
 
 
+def logPath = System.properties.getProperty('logDir')
+logfile =  "${logPath}/jk-loadbalancer-api.log"
+println "logging to: $logfile"
+
 // log4j configuration
 log4j = {
 
     appenders {
        console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-       rollingFile name:'jkbalancer', maxFileSize:"1GB", file: "/var/log/tomcat-server/jk-loadbalancer-api.log"
+       rollingFile name:'jkbalancer', maxFileSize:"1GB", file: logfile
         }
 
 
@@ -72,8 +76,8 @@ log4j = {
 	  warn   'org.mortbay.log'
 
 	root {
-	    info 'jkbalancer', 'stdout'
-	    additivity = false
+	    info 'jkbalancer'
+	    additivity = true
 	}
 
 }

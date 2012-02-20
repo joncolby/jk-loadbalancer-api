@@ -60,7 +60,7 @@ class ApacheFrontendController {
         
         
         if (!host.save(flush: true)) {
-        	 println host.errors
+        	 log.error host.errors
         }
        
         host.addToFrontends(apacheFrontendInstance)     

@@ -30,16 +30,23 @@ class FrontInventoryJob {
       // read fronts out of the inventory database
       def sql = Sql.newInstance(inventoryDBUrl, inventoryDBUser, inventoryDBPassword, "com.mysql.jdbc.Driver")
 
-      def className = sql.firstRow("select serverclass_id from serverclass where classname = 'FRONT-NS'")
+      def frontClassIds = []
 
-      def serverclass_id = className.serverclass_id
+      sql.eachRow("select serverclass_id from serverclass where classname like '%FRONT%'") {
+          frontClassIds << it.serverclass_id
+      }
 
-      log.debug "serverclass_id is " + serverclass_id
 
-      sql.eachRow("select get_hostname_by_server_id(server_id) as name from assignment where serverclass_id=${serverclass_id}", {
-          log.debug "found server " + it.name
-          dbFronts << it.name
-            })
+      frontClassIds.each { serverclass_id ->
+
+          log.debug "serverclass_id is " + serverclass_id
+
+          sql.eachRow("select get_hostname_by_server_id(server_id) as name from assignment where serverclass_id=${serverclass_id}", {
+              log.debug "found server " + it.name
+              dbFronts << it.name
+                })
+
+      }
 
 
       sql.close()

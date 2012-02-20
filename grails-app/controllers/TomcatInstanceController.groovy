@@ -65,7 +65,7 @@ class TomcatInstanceController {
             def matcher = tomcatInstance.name =~ /(\w+)(\d{2})_((i|c)\d{2})_(\d{3,4})/
             if(matcher.count == 1) {
                 lb = matcher[0][1] + 'lb'
-                println "search for $lb"
+                log.debug "search for $lb"
             }
         } else
             if(params.lb)
@@ -89,7 +89,7 @@ class TomcatInstanceController {
                             infoWorker.disabled.add(worker.instance.name)
                             break
                         default :
-                            println "$worker.name active" 
+                            log.debug "$worker.name active"
                             break
                     }
                     switch(worker.state) {

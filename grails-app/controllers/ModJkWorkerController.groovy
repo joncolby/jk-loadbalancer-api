@@ -18,7 +18,7 @@ class ModJkWorkerController {
                 jkService.updateActivation(worker, params.updateActivation)
                 worker.activation = params.updateActivation
                 worker.save()
-                println worker
+                log.debug worker
             }
         }
         render(view: 'list', model: [modJkWorkerList: workers,

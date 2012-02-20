@@ -63,7 +63,7 @@ class LoadBalancerController {
 			  	if ( params.slow && Integer.parseInt(params.slow) )
 				  				maximum = params.slow	
 		  } catch (NumberFormatException nfe) {
-			  	println nfe.toString()
+			  	log.error nfe.toString()
 		  }
 		  
 
