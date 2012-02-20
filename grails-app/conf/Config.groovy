@@ -56,7 +56,7 @@ log4j = {
 
     appenders {
        console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-       rollingFile name:'jkbalancer', maxFileSize:"1GB", file: logfile
+       rollingFile name:'jkbalancer', maxFileSize:"500MB", file: logfile
         }
 
 
