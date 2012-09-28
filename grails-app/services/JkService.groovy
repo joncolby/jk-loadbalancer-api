@@ -94,6 +94,36 @@ class JkService {
         }
     }
 
+    def searchLoadBalancer(String lbName, String activation, String state, String netmask = null) {
+
+        def c = ModJkWorker.createCriteria()
+
+        def results = c.list() {
+            and {
+                loadbalancer {
+                    eq('name', lbName)
+                }
+                if (activation)
+                    eq('activation', activation)
+                if (state)
+                    ilike('state', "${state}%")
+                if (netmask)
+                    like('address', "${netmask}%")
+            }
+            fetchMode( 'loadbalancer', FM.EAGER)
+
+            projections {
+		        countDistinct "name"
+	        }
+        }
+
+        if (results)
+            return results[0]
+        else
+            return null
+
+    }
+
     def JkStatus jkStatus(String url, String user, String password) {
         def statusAccessor = new JkStatusAccessor()
         JkStatus jkstatus = null

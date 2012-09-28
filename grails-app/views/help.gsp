@@ -34,6 +34,43 @@
         <td><a href="<g:createLink controller="dashboard" action="queue" />">Activation Queue</a></td>
         </tr>
         </table>
+
+        <h2>Health and Statistics:</h2>
+
+        <table border="1">
+        <tr>
+        <th>function</th>
+        <th>description</th>
+        <th>rest syntax</th>
+        </tr>
+
+        <tr>
+        <td>stats</td>
+        <td>Show statistics for a modjk loadbalancer</td>
+        <td>${context}stats/<b>[lbname]</b>[?netmask=ip-address]</td>
+        </tr>
+
+        <tr>
+        <td>health</td>
+        <td>Show the health of workers in a modjk loadbalancer</td>
+        <td>${context}health/<b>[lbname]</b>[?netmask=ip-address]</td>
+        </tr>
+
+        </table>
+
+      <p>
+         <h3>Examples:</h3>
+
+        <pre>
+        ${request.getRequestURL()}health/search
+        ${request.getRequestURL()}health
+        ${request.getRequestURL()}health/search?netmask=10.46
+
+        ${request.getRequestURL()}stats/search
+        ${request.getRequestURL()}stats/search?netmask=10.47
+        ${request.getRequestURL()}stats
+        </pre>
+        </p>
         
         
         <h2>List functions:</h2>
@@ -87,11 +124,11 @@
          <h3>Examples:</h3>
         
         <pre>
-       http://api-host${context}list/search45-1
-       http://api-host${context}list/home45-2?instance=home45-2_i01
-       http://api-host${context}list/search45-18?activation=STP
-       http://api-host${context}list/oeb45-1?state=ERR
-       http://api-host${context}listlb/searchlb
+       ${request.getRequestURL()}list/search45-1
+       ${request.getRequestURL()}list/home45-2?instance=home45-2_i01
+       ${request.getRequestURL()}list/search45-18?activation=STP
+       ${request.getRequestURL()}list/oeb45-1?state=ERR
+       ${request.getRequestURL()}listlb/searchlb
         </pre>
         </p>
         

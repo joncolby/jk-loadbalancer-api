@@ -7,6 +7,16 @@ class UrlMappings {
 			 // apply constraints here
 		  }
 	  }
+
+      "/health/$lbname?"{
+          controller = "loadBalancerStatistic"
+          action = [GET:"health"]
+      }
+
+      "/stats/$lbname?"{
+          controller = "loadBalancerStatistic"
+          action = [GET:"stats"]
+      }
       
 	  "/service/$rest/$domain/$id?"{
             controller = "rest"

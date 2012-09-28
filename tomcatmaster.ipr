@@ -228,9 +228,12 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tomcatmaster.iml" filepath="$PROJECT_DIR$/tomcatmaster.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tomcatmaster-grailsPlugins.iml" filepath="$PROJECT_DIR$/tomcatmaster-grailsPlugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jk-loadbalancer-api.iml" filepath="$PROJECT_DIR$/jk-loadbalancer-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jk-loadbalancer-api-grailsPlugins.iml" filepath="$PROJECT_DIR$/jk-loadbalancer-api-grailsPlugins.iml" />
     </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

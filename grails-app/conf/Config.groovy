@@ -47,7 +47,8 @@ environments {
 }
 
 
-def logPath = System.properties.getProperty('logDir')
+def logPath = System.properties.getProperty('logDir') ?: System.getProperty("user.dir")
+
 logfile =  "${logPath}/jk-loadbalancer-api.log"
 println "logging to: $logfile"
 
