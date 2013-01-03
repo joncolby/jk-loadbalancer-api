@@ -19,9 +19,11 @@ class LoadBalancerStatisticController {
                loadBalancerList = ModJkLoadbalancer.list().collect { it.name }.unique()
         }
 
+        def statsArray = []
         def statsMap = [:]
 
         loadBalancerList.each { lb ->
+            statsMap = [:]
          def active = jkService.searchLoadBalancer(lb,"ACT","", netmask)
          def activeError = jkService.searchLoadBalancer(lb,"ACT","ERR",netmask)
          def activeOK = jkService.searchLoadBalancer(lb,"ACT","OK", netmask)
@@ -29,35 +31,34 @@ class LoadBalancerStatisticController {
          def disabled = jkService.searchLoadBalancer(lb,"DIS","", netmask)
          def total = jkService.searchLoadBalancer(lb,"","", netmask)
 
-         if (active)
-         statsMap["${lb}.ACTIVE"] = active
-
-         if (activeError)
-         statsMap["${lb}.ACTIVE.ERROR"] = activeError
+         statsMap["${lb}.LBNAME"] = lb
+         statsMap["${lb}.ACTIVE"] = active ?: 0
+         statsMap["${lb}.ACTIVE.ERROR"] = activeError ?: 0
 
             if (active && activeError) {
                 def percentActiveError = activeError / active * 100
                 statsMap["${lb}.ACTIVE.ERROR.PERCENT"] = percentActiveError.stripTrailingZeros().toPlainString()
             }
 
-         if (activeOK)
-         statsMap["${lb}.ACTIVE.OK"] = activeOK
+         statsMap["${lb}.ACTIVE.OK"] = activeOK ?: 0
 
             if ( active && activeOK) {
                 def percentActiveOk = activeOK / active * 100
                 statsMap["${lb}.ACTIVE.OK.PERCENT"] = percentActiveOk.stripTrailingZeros().toPlainString()
+            } else {
+              statsMap["${lb}.ACTIVE.OK.PERCENT"] = 0
             }
 
+            statsMap["${lb}.STOPPED"] = stopped ?: 0
+            statsMap["${lb}.DISABLED"] = disabled ?: 0
+            statsMap["${lb}.TOTAL"] = total ?: 0
 
-         if (stopped)
-            statsMap["${lb}.STOPPED"] = stopped
-
-         if (disabled)
-            statsMap["${lb}.DISABLED"] = disabled
-
-         if (total)
-            statsMap["${lb}.TOTAL"] = total
-
+            if (total > 0) {
+                statsMap["${lb}.TOTAL.OK"] = (total - ( stopped + disabled )) / total * 100
+            } else {
+                statsMap["${lb}.TOTAL.OK"] = 0
+            }
+            statsArray << statsMap
         }
 
          if (!statsMap) {
@@ -65,7 +66,8 @@ class LoadBalancerStatisticController {
              return
          }
 
-         render(view:"stats", model: [statsMap:statsMap])
+         //render(view:"stats", model: [statsMap:statsMap])
+         render(view:"stats", model: [statsArray:statsArray])
     }
 
     def health = {

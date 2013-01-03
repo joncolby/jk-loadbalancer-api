@@ -32,7 +32,7 @@ class FrontInventoryJob {
 
       def frontClassIds = []
 
-      sql.eachRow("select serverclass_id from serverclass where classname like '%FRONT%'") {
+      sql.eachRow("select serverclass_id from serverclass where classname like '%FRONT%' or classname = 'FFIRE' or classname = 'FEBAYK'") {
           frontClassIds << it.serverclass_id
       }
 
@@ -42,8 +42,10 @@ class FrontInventoryJob {
           log.debug "serverclass_id is " + serverclass_id
 
           sql.eachRow("select get_hostname_by_server_id(server_id) as name from assignment where serverclass_id=${serverclass_id}", {
+
               log.debug "found server " + it.name
               dbFronts << it.name
+
                 })
 
       }
