@@ -35,10 +35,12 @@ class LoadBalancerStatisticController {
          statsMap["${lb}.ACTIVE"] = active ?: 0
          statsMap["${lb}.ACTIVE.ERROR"] = activeError ?: 0
 
+         /*
             if (active && activeError) {
                 def percentActiveError = activeError / active * 100
                 statsMap["${lb}.ACTIVE.ERROR.PERCENT"] = percentActiveError.stripTrailingZeros().toPlainString()
             }
+         */
 
          statsMap["${lb}.ACTIVE.OK"] = activeOK ?: 0
 
