@@ -112,7 +112,7 @@ class JkService {
             }
             fetchMode( 'loadbalancer', FM.EAGER)
 
-            projections {
+          projections {
 		        countDistinct "name"
 	        }
         }

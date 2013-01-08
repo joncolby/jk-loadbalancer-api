@@ -30,7 +30,6 @@ class LoadBalancerStatisticController {
          def stopped = jkService.searchLoadBalancer(lb,"STP","", netmask)
          def disabled = jkService.searchLoadBalancer(lb,"DIS","", netmask)
          def total = jkService.searchLoadBalancer(lb,"","", netmask)
-
          statsMap["${lb}.LBNAME"] = lb
          statsMap["${lb}.ACTIVE"] = active ?: 0
          statsMap["${lb}.ACTIVE.ERROR"] = activeError ?: 0
@@ -45,7 +44,9 @@ class LoadBalancerStatisticController {
          statsMap["${lb}.ACTIVE.OK"] = activeOK ?: 0
 
             if ( active && activeOK) {
-                def percentActiveOk = activeOK / active * 100
+                log.info "${lb} activeOK: " + activeOK
+                log.info "${lb} active - activeError: " +  (active - activeError)
+                def percentActiveOk = (active - activeError) / active * 100
                 statsMap["${lb}.ACTIVE.OK.PERCENT"] = percentActiveOk.stripTrailingZeros().toPlainString()
             } else {
               statsMap["${lb}.ACTIVE.OK.PERCENT"] = 0
@@ -56,9 +57,9 @@ class LoadBalancerStatisticController {
             statsMap["${lb}.TOTAL"] = total ?: 0
 
             if (total > 0) {
-                statsMap["${lb}.TOTAL.OK"] = (total - ( stopped + disabled )) / total * 100
+                statsMap["${lb}.TOTAL.OK.PERCENT"] = (total - ( stopped + disabled )) / total * 100
             } else {
-                statsMap["${lb}.TOTAL.OK"] = 0
+                statsMap["${lb}.TOTAL.OK.PERCENT"] = 0
             }
             statsArray << statsMap
         }
