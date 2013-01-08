@@ -32,7 +32,7 @@ class FrontInventoryJob {
 
       def frontClassIds = []
 
-      sql.eachRow("select serverclass_id from serverclass where classname like '%FRONT%' or classname = 'FFIRE' or classname = 'FEBAYK'") {
+      sql.eachRow("select serverclass_id from serverclassdetail where detailkey='jklb_api' and detailvalue=1") {
           frontClassIds << it.serverclass_id
       }
 
